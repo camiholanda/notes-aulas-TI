@@ -1,0 +1,57 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		//declaração de variáveis
+		
+		real tx1LCIs, tx2CDB, tempoAplicacaoCDB, dInvestido, iR, gB, gL, saida
+
+		//entrada de dados pelo usuário
+		
+		escreva("Vamos identificar o seu melhor investimento.\nPara isto, primeiramente digite a taxa de Juros LCI/LCA: ")
+		leia(tx1LCIs)
+		
+		escreva("Agora digite taxa de Juros do CDB: ")
+		leia(tx2CDB)
+		
+		escreva("Agora digite em dias o tempo que o investimento será mantido: ")
+		leia(tempoAplicacaoCDB)
+		
+		escreva("Por fim, digite o dinheiro que pretende investir: ")
+		leia(dInvestido)
+		
+		//condições aplicadas de acordo com a tabela de Imposto de Renda Fixa
+		
+		 se(tempoAplicacaoCDB <=  180)
+    {
+			iR = 0.225
+		}
+		senao se(tempoAplicacaoCDB >=  181 e tempoAplicacaoCDB <= 360)
+		{
+		  iR = 0.20
+		}
+	
+		senao se(tempoAplicacaoCDB >=  361 e tempoAplicacaoCDB <= 720)
+		{
+			iR = 0.175
+		}
+		senao se(tempoAplicacaoCDB >=  720)
+		{
+			iR = 0.15			
+		}
+    senao
+    {}
+      gB = dInvestido * tx2CDB
+      gL = gB * (1 - iR)
+      gB = dInvestido * tx1LCIs
+
+      se(gB > gL)
+      {
+        escreva("Seu melhor investimento é LCI." )
+      }senao
+      {
+        escreva("Seu melhor investimento é: CDB. " )
+      }
+	}
+}
