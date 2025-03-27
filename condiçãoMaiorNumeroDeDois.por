@@ -12,7 +12,7 @@ programa
 		leia(num2)
 
 		se(num1 > num2){
-		escreva("Número ", num1 , " é maior que número ", num2)
+			escreva("Número ", num1 , " é maior que número ", num2)
 		
 		}senao{
 			escreva("Número "  , num2 , " é maior que número ", num1)
