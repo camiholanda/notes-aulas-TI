@@ -5,7 +5,7 @@ programa
 	{
 		//declaração de variáveis
 		
-		real tx1LCIs, tx2CDB, tempoAplicacaoCDB, dInvestido, iR, gB, gL, saida
+		real tx1LCIs, tx2CDB, tempoAplicacaoCDB, dInvestido, iR, gB, gL
 
 		//entrada de dados pelo usuário
 		
