@@ -24,7 +24,7 @@ programa
 		//condições aplicadas de acordo com a tabela de Imposto de Renda Fixa
 		
 		 se(tempoAplicacaoCDB <=  180)
-    {
+  	        {
 			iR = 0.225
 		}
 		senao se(tempoAplicacaoCDB >=  181 e tempoAplicacaoCDB <= 360)
