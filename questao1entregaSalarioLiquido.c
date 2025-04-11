@@ -3,10 +3,15 @@
 
 int main()
 {
-    float s, sBruto, sLiquido, descINSS;
+    //Declaracao de variaveis
+    float s, sBruto, sLiquido, descINSS, descIR;
+
+    //Solicitar ao usuario os dados do salario
+
     printf("Vamos calcular o seu salario liquido. Digite seu salário: ");
     scanf("%f", &s);
-    
+
+    //calculo do salario menos o valor a ser descontado do INSS
     if(s <= 1320,00)
     {
          descINSS = 1320.00 * 0.75;
@@ -27,5 +32,14 @@ int main()
     {
         descINSS = 1501.49;
     }
+        //Calcular IR já com o valor do salario menos INSS
+        //Calcular salario liquido e mostrar na tela o resultado do calculo do salario liquido
+    if()
+    {
+        descIR;
+    }
+
+        //Estruturar while para esse bloco de codigo ser repetido para o user poder verificar varios salarios, um atras do outro.
+
     return 0;
 }
