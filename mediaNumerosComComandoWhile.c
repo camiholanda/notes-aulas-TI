@@ -16,10 +16,9 @@ int main()
              soma = soma + num;
              i++;
         }
-	    //%.2f trunca o numero em 3 casas decimais???
+	    //%.2f trunca(arredondar) o numero em 2 casas decimais, todo número depois da vírgula.
             media = soma / n;
             printf("A media dos numeros eh: %f ", media);
-
             return 0;
 
 }
