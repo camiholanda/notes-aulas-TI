@@ -11,11 +11,12 @@ int main()
 
 		while(i <= n)
 		{
-             printf("Digite um número: ");
+             printf("Digite um nÃºmero: ");
              scanf("%f", &num);
              soma = soma + num;
              i++;
         }
+	    //%.2f trunca o numero em 3 casas decimais???
             media = soma / n;
             printf("A media dos numeros eh: %f ", media);
 
