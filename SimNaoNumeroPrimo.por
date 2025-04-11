@@ -12,18 +12,18 @@ programa
 		{
 			se(num % i == 0)
 			{
-			primo = falso
-			escreva("Não é numero primo.")
-      	escreva("\n Informe outro número: ")
-		    leia(num)
+				primo = falso
+				escreva("Não é numero primo.")
+	      			escreva("\n Informe outro número: ")
+			  	leia(num)
 			
 			}
 			senao
 			{
 				primo = verdadeiro
 				escreva("É numero primo")
-        escreva("\n Informe outro número: ")
-		    leia(num)
+        			escreva("\n Informe outro número: ")
+		   		leia(num)
 			
 			}
 			
