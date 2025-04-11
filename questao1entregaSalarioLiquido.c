@@ -3,11 +3,10 @@
 
 int main()
 {
-
     float s, sBruto, sLiquido, descINSS;
-    printf("Vamos calcular o seu salario liquido: ");
+    printf("Vamos calcular o seu salario liquido. Digite seu salário: ");
     scanf("%f", &s);
-
+    
     if(s <= 1320,00)
     {
          descINSS = 1320.00 * 0.75;
@@ -28,7 +27,5 @@ int main()
     {
         descINSS = 1501.49;
     }
-
-
     return 0;
 }
