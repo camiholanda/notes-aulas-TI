@@ -385,6 +385,33 @@ Sim, há um padrão. Todos utilizam texto ou imagem para transmitir uma mensagem
 -------------------------------------------------------------------------------------------------
 Introdução aos Sistemas Operacionais
 
+FILE SYSTEM
+TECLA DE ATALHO 
+WIN + X = PRINCIPAL OPÇÕES DO SISTEMA OPERACIONAL WINDOWS
+WIN R = ABRE EXECUTAR
+
+---------- GERENCIAMENTO DE DISCO ---------
+SOMENTE ACESSO ADM
+GERENCIA TUDO O QUE FOR DE ARMAZENDAMENTO 
+NTFS = PRINCIPAL SISTEMA DE ARQUIVO DO WINDOWS
+
+FILE SYSTEM
+
+EXPLORA A PARTE DO HD:
+LEITURA E GRAVAÇÃO DE DADOS NO HD
+CONTROLA A LOCALIZAÇÃO DAS INFORMAÇÕES (NOMES E ENDEREÇAMENTO)
+CONTROLA A PERMISSÃO (DEPENDE DO FS)
+
+CLUSTER X SETORES 
+
+ESTRUTURA DE DIRETÓRIOS
+
+
+
+
+
+
+
 
 
 
