@@ -1,0 +1,43 @@
+ INTROD. SISTEMAS OPERACIONAIS PAGES 54 - 73 PDF AULA
+   
+  # Resumo do PDF: Sistema Operacional Windows
+
+## 1. Configuração e Monitoramento do Windows
+
+### 1.1 Execução como Administrador
+- **Práticas recomendadas de segurança**: Evitar logon com contas administrativas para prevenir acesso total a arquivos e pastas, reduzindo o risco de malware [1].
+- **Métodos de execução**: Para instalar software que requer privilégios administrativos, utilize o menu de contexto no Windows File Explorer ou o Prompt de Comando do Administrador [2][3].
+
+### 1.2 Usuários e Domínios Locais
+- **Criação de conta de usuário**: Ao iniciar o Windows pela primeira vez, é solicitado criar uma conta local, que armazena configurações e permissões [4].
+- **Grupos e domínios**: O Windows utiliza grupos para gerenciar permissões e domínios para controlar usuários e dispositivos em uma rede [4].
+
+## 2. Interface de Linha de Comando (CLI) e PowerShell
+
+### 2.1 CLI do Windows
+- **Funções**: A CLI permite executar programas, navegar e gerenciar arquivos. Comandos podem ser completados automaticamente usando a tecla Tab e a CLI mantém um histórico de comandos [5][6].
+
+### 2.2 PowerShell
+- **Automação**: PowerShell permite criar scripts para automatizar tarefas. Os comandos incluem cmdlets, scripts e funções [6][7].
+- **Ajuda**: Quatro níveis de ajuda estão disponíveis para comandos no PowerShell, proporcionando informações detalhadas e exemplos [7].
+
+## 3. Instrumentação de Gerenciamento do Windows (WMI)
+- **Gerenciamento remoto**: WMI é usado para gerenciar computadores remotos, coletar informações sobre hardware e monitorar a integridade do sistema [8].
+- **Segurança**: Configurações de segurança no WMI ajudam a controlar o acesso às informações coletadas, mas também podem ser exploradas por atacantes [9].
+
+## 4. Comando Net
+- **Uso e subcomandos**: O comando net é essencial para administração e manutenção do sistema operacional, suportando vários subcomandos para gerenciar usuários, sessões e serviços [10][11].
+
+## 5. Gerenciador de Tarefas e Monitor de Recursos
+### 5.1 Gerenciador de Tarefas
+- **Funcionalidade**: Fornece informações sobre processos em execução, uso de recursos e permite gerenciamento de aplicativos que iniciam com o sistema [12][13][14].
+- **Guias**: Inclui guias para processos, desempenho, histórico de aplicativos, usuários e serviços, facilitando a administração do sistema [12][13].
+
+### 5.2 Monitor de Recursos
+- **Análise detalhada**: Permite visualizar o uso de CPU, memória, disco e rede, ajudando a identificar problemas de desempenho [15][16].
+
+## 6. Redes
+- **Conexão e configuração**: O Windows permite a configuração de redes e acesso à internet através do Centro de Rede e Compartilhamento, onde é possível alterar configurações de adaptadores [17][18][19].
+- **Propriedades TCP/IP**: A configuração de propriedades de rede, como TCP/IPv4 e TCP/IPv6, é essencial para a comunicação adequada na rede [20].
+
+Este resumo abrange os principais tópicos e ideias do PDF, destacando as práticas recomendadas, ferramentas disponíveis e a importância da segurança no gerenciamento do sistema operacional Windows.
