@@ -8,7 +8,7 @@ int main()
     scanf("%f",&nota);
     if(nota >= 30 && nota <= 60)
     {
-        printf("Será necessário realizar a sub. ");
+        printf("SerÃ¡ necessÃ¡rio realizar a sub. ");
     }
     return 0;
 }
