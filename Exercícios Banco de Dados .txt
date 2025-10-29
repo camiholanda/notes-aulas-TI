@@ -1,0 +1,47 @@
+
+
+questão 1:
+SELECT DISTINCT nome FROM empregado;
+
+questão 2:
+SELECT DISTINCT nome FROM projeto;
+
+questão 3:
+SELECT nome FROM empregado WHERE estado = "RJ";
+
+questão 4:
+SELECT max(salario) FROM empregado
+
+questão 5:
+SELECT (SUM(salario)) FROM empregado WHERE estado = "SP"
+
+questão 6:
+SELECT DISTINCT papel_emp FROM emp_proj
+
+questão 7: 
+SELECT cod_proj FROM emp_proj;
+
+questão 8:
+SELECT nome, data_ini FROM projeto WHERE month(data_ini)= 4
+
+questão 9:
+SELECT cod_proj FROM projeto WHERE data_fim is NULL;
+
+questão 10:
+SELECT MIN(datanasc) FROM empregado
+
+
+
+
+
+
+Exercício 2
+
+1. SELECT max(Preco_custo) FROM produtos
+2. SELECT AVG(valor_total) FROM produtos
+3. SELECT COUNT(cod_cliente) FROM clientes
+4. SELECT SUM(cod_venda) FROM itens_venda
+5. SELECT max(cod_venda) from vendas
+6. SELECT DISTINCT tipo FROM produtos
+7. SELECT DATE_FORMAT(data_hora_venda, "%D, %M, %Y") FROM vendas
+8. SELECT * FROM produtos order by Quant_estoque DESC;
