@@ -1,1 +1,26 @@
-Select distinct > quando quero visualizar dados sem repetição
+select distinct -  comando quando quero visualizar dados sem repetição
+
+select date_format(data_hora_venda, '%d- %m - %Y') as Venda from vendas
+
+select distinct estado
+from clientes
+
+select * from produtos order by nome;  - comando para ordenar
+select * from produtos order by quant_estoque desc; --- desc para decrescente
+
+select nome, quant_estoque 
+from produtos where tipo = 'Limpeza'
+
+----------- funções de agregação ----------
+Quais são as funções de agregação?
+Uma função de agregação executa um cálculo em um conjunto de valores e retorna um único valor.
+Com exceção de COUNT(*) , as funções de agregação ignoram valores nulos.
+
+sum(nome_coluna) from <table>
+
+round(<quem formatar>,<quantas casas decimais>)
+select round(min(funsalario),2) --- consulta o menor salário
+
+count(*) -- consta quantos registros tem da minha condição
+
+
