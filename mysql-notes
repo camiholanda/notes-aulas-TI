@@ -1,1 +1,29 @@
 
+select clientes.ClienteCPF from clientes;
+
+select clientes.ClienteCPF, (clientes.ClientesCPF,4,3) from clientes;
+
+
+-- Exiba o nome e o e-mail dos clientes cujos endereços de e-mail pertencem ao domínio "gmail.com"
+SELECT 	clientes.ClienteNome,
+		clientes.ClienteEmail
+FROM clientes WHERE
+RIGHT(clientes.ClienteEmail, 10) = '@gmail.com';
+
+-- Liste o nome e o saldo das contas cujo saldo esteja acima da média de saldo de todas as contas
+
+create view vw_saldo_media as
+select clientes.ClienteNome, contas.ContaSaldo
+from contas
+inner join clientes;
+select avg(contasaldo) from vw_saldo_media;
+
+
+-- Exiba os primeiros nomes dos clientes (assuma que o primeiro nome termina com o primeiro espaço
+-- em branco)
+
+select substring_index(ClienteNome, ' ', 1) AS PrimeiroNome
+FROM clientes;
+
+
+
