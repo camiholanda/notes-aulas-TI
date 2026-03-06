@@ -24,6 +24,92 @@ select avg(contasaldo) from vw_saldo_media;
 
 select substring_index(ClienteNome, ' ', 1) AS PrimeiroNome
 FROM clientes;
+---------------------------------------------------------------------------
+delimiter -> 
+
+O comando DELIMITER no MySQL serve para mudar temporariamente o caractere finalizador de comandos (que padrão é o ponto e vírgula ;)
+para que blocos de código complexos, como Stored Procedures, Functions ou Triggers, possam ser criados de uma só vez. 
+
+De forma mais simples:
+O Problema: Procedures usam ; dentro delas (ex: SELECT * FROM tabela;). 
+Se você não mudar o delimitador,o MySQL acha que a Procedure acabou no primeiro ; interno e dá erro.
+A Solução: Você usa DELIMITER $$ para dizer ao MySQL: "Só pare de ler quando encontrar $$".
+Finalização: Depois de criar a procedure, usa-se DELIMITER ; para voltar o padrão. 
+
+
+Exemplo Prático:
+sql
+DELIMITER $$  -- Muda o finalizador de ; para $$
+
+CREATE PROCEDURE MinhaProcedure()
+BEGIN
+    SELECT 'Olá' AS Mensagem; -- O ; aqui não fecha a procedure
+    SELECT 'Mundo' AS Mensagem;
+END$$ -- A procedure só fecha aqui
+
+DELIMITER ; -- Volta o finalizador para ;
+
+------------------------------------------------------------------------------------
+
+
+comando set -> quando quero declarar e colocar valor em variáveis e para realizar o processo dessa expressão
+	set soma = a + b
+	return soma
+
+----------------------------------------------------------------
+iniciar com <delimiter $$> e finalizar com <delimiter ;>
+
+delimiter $$
+
+create function fn_initcap(nome varchar (50))
+
+returns varchar(50)
+
+begin
+	upper(substring(nome, 1, 1))
+	lower(substring(nome, 2, 50))
+
+	return concat(upper(substring(nome, 1, 1)),
+		      lower(substring(nome, 2, 50))
+		      );
+end $$
+delimiter ;
+
+// É possível usar as funções com as tabelas //
+EXEMPLO:
+select fn_initcap(nome) from estudantes;
+------------------------------------------------------------
+delimiter //
+
+create function fn_cont_matr(id int)
+
+returns smallint
+
+begin
+	declare v_qtde int default 0;
+
+	select count(*) into v_qtde 
+		from estudante_assiste_curso
+		where idestudante = p_id;
+return
+
+
+
+end //
+
+delimiter ;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
