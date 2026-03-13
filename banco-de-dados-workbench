@@ -61,6 +61,26 @@ BEGIN
 END //
 DELIMITER ;
 
+funções com selects inside depende do que tem dentro de banco de dados ???
+		EXEMPLO:
+
+delimiter $$
+
+create function fn_retorna_ano()
+
+returns smallint
+
+begin
+	return (select max(ano) from ano);
+
+end $$
+
+delimiter ; 
+
+select fn_retorna_ano();
+
+
+
 
 
 
