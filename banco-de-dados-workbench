@@ -14,6 +14,21 @@ em uma função criada nós que dizemos os tipos e parametros para retornar
 lembrar que quando fixo valores dentro de uma função, menos genérica ela fica
 se usar variáveis, torna-se mais genérico
 
+SINTAXE:
+        DELIMITER // OU $$ 
+
+        CREATE FUNCTION <NOMEFUNÇÃO> (<PARAMETRO1 TIPOPARAMETRO1>, <PARAMETRO2 TIPOPARAMETRO2>)
+                RETURNS <TIPO RETORNO>
+        BEGIN
+                <ESCREVER PROCESSAMENTO>
+                RETURN <VALOR RETORNO> ;
+        END // OU $$
+
+        DELIMITER ;
+
+----LEMBRAR QUE DELIMITER DELIMITA COMANDOS DENTRO DE MINHA FUNÇÃO E FAZ ELA NÃO PARAR NO MEIO DO PROCESSAMEMTO----
+
+
 
         
   
