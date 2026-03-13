@@ -3,5 +3,13 @@ Funções recebem ou não parâmetros
         quando não recebem, elas não necessitam de nada externo para processar.
 
 parâmetros () -> para "cada" parâmetro, falar nome e domínio
+
+        lenght -> que conta os dados de um caractere é um exemplo que necessitaria de parâmetro
+
+now() -> exibe data e hora -> retorno tipo datetime
+
+lembrar de considerar o tipo de retorno da função
+em uma função criada nós que dizemos os tipos e parametros para retornar
+
         
   
