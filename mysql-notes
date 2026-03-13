@@ -99,6 +99,48 @@ end //
 
 delimiter ;
 
+----------------------------------------------------------------------------------------------------------
+
+1. Função de Crescimento Populacional
+-- Crie uma função que receba dois anos como parâmetro e o código de um município.
+-- A função deve retornar o crescimento populacional absoluto entre os dois anos.
+-- o Em seguida, faça um SELECT que utilize a função para mostrar o crescimento
+-- de um município à sua escolha. 
+
+SET GLOBAL log_bin_trust_function_creators = 1;
+
+DELIMITER //
+CREATE FUNCTION fn_crescimento_populacional(
+    p_ano_inicial INT,
+    p_ano_final INT,
+    p_cod_municipio INT
+)
+RETURNS INT
+
+BEGIN
+    DECLARE v_pop_inicial INT DEFAULT 0;
+    DECLARE v_pop_final INT DEFAULT 0;
+    DECLARE v_crescimento INT;
+
+    SELECT populacao INTO v_pop_inicial
+    FROM censo
+    WHERE cod_mun = p_cod_municipio
+    AND ano = p_ano_inicial;
+
+	SELECT populacao INTO v_pop_final
+    FROM censo
+    WHERE cod_mun = p_cod_municipio
+    AND ano = p_ano_final;
+
+    SET v_crescimento = v_pop_final - v_pop_inicial;
+
+    RETURN v_crescimento;
+END //
+DELIMITER ;
+
+SELECT fn_crescimento_populacional(2012, 2011, 19) AS crescimento;
+
+
 
 
 
