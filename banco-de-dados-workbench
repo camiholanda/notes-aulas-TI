@@ -80,13 +80,8 @@ delimiter ;
 select fn_retorna_ano();
 
 
-
-
-
-
-
-
-
+declarar variáveis dentro do processamento ???
+ após BEGIN
 
 
 
