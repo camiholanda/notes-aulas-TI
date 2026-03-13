@@ -30,6 +30,43 @@ SINTAXE:
 ----LEMNRAR QUE MYSQL NECESSITA DE UM COMANDO OU TIPO IMPORTAÇÃO DE ALGO NO INICIO DA IDE PARA UTILIZAR FUNÇÕES
         SET GLOBAL log_bin_trust_functionm_creators = 1; ----
 
+precisa colocar função em algum banco de dados
+
+após criação da função, forma de executar: 
+        select fn_soma();
+
+
+---------------------------------------------------
+FUNÇÕES COM VALORES FIXOS E COM VARIAVEIS :
+
+SET GLOBAL log_bin_trust_function_creators = 1;
+
+ DELIMITER //
+CREATE FUNCTION fn_soma()
+		RETURNS int
+BEGIN
+		RETURN(3+7) ;
+END //
+DELIMITER ;
+
+
+select fn_soma();
+
+DELIMITER //
+CREATE FUNCTION fn_soma2(pvalor1 int, pvalor2 int)
+
+		RETURNS int
+BEGIN
+		RETURN(pvalor1 + pvalor2) ;
+END //
+DELIMITER ;
+
+
+
+
+
+
+
 
 
 
