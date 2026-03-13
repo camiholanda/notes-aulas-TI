@@ -86,7 +86,11 @@ declarar variáveis dentro do processamento ???
 DECLARAR VARIAVEL DE NTRO DE PROCESSAMENTO
 USAR COMANDO SELECT COM FUNÇÃO (COMANDO QUE CONSULTA O BANCO DE DADOS) E COLOCA VALOR NA VARIAVEL E APONTAR DE QUAL TABELA -> FROM ANO;
 
+COMANDO SET -> PARA MANIPULAR VARIAVEIS
 
+Diferença entre SET e SELECT para Variáveis:
+			SET: Melhor para atribuições simples e diretas (SET @x = 1;).
+			SELECT: Pode ser usado para atribuir variáveis baseadas em resultados de consultas (SELECT @x := COUNT(*) FROM tabela;)
 
 
         
