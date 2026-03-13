@@ -1,0 +1,7 @@
+Funções sempre retornam 1 valor que tem um domínio (tipo de dado)
+Funções recebem ou não parâmetros
+        quando não recebem, elas não necessitam de nada externo para processar.
+
+parâmetros () -> para "cada" parâmetro, falar nome e domínio
+        
+  
