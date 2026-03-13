@@ -11,5 +11,9 @@ now() -> exibe data e hora -> retorno tipo datetime
 lembrar de considerar o tipo de retorno da função
 em uma função criada nós que dizemos os tipos e parametros para retornar
 
+lembrar que quando fixo valores dentro de uma função, menos genérica ela fica
+se usar variáveis, torna-se mais genérico
+
+
         
   
