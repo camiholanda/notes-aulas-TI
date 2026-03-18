@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node02</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <button type="button" onclick="testar()">Play</button>
+</body>
+</html>
+------
+//estruturas de repetição, vetores, listas, estruturas diferentes e ir para Node.Js
+//ferramentas que substituirão pessoas/automações/"vendas passivas/ativas"
+
+/* function testar() {
+
+//iterar = passar por cada uma da definição com valor definido ????
+    for(let i = 1; i <=10 ; i++){
+        console.log(i)
+    }
+    for(let i = 10; i >=0; i-=2){
+        console.log(i)
+    }
+
+//exemplo
+    console.warn('--------------')
+    let i = 0;
+    while(i<20){
+        console.log(i)
+        i+=3
+}
+//exemplo
+    console.warn('--------------')
+    let cesto
+     = ['maçã', 'banana', 'uva']
+    console.log(cesto
+    )
+}*/
+function testar() {
+
+    console.warn('--------------')
+
+    let cesto = ['maçã', 'banana', 'uva']
+
+    console.log(cesto)
+
+    let fruta = prompt('Digite uma fruta:')
+    //para inserir um item a mais e no final da lista:
+    cesto.push(fruta)
+    //mostrar lista com adição:
+    console.log(cesto)
+
+//para REMOVER um item no final da lista:
+    let remover = cesto.pop();
+
+    console.log(`Remover: ${remover}`)
+
+    console.log(cesto)
+
+//iterar - [] = vetores
+    console.log('Total de frutas:', cesto.length)
+
+    for(let j = 0; j < cesto.length; j++){
+
+        console.log(cesto[j])
+
+}
+
+
+//JAVASCRIPT NÃO OBRIGA USAR PONTO E VÍRGULA
+//JAVASCRIPT SOMENTE APONTA O USO DE PONTO E VÍRGULA QUANDO ESCREVE-SE VÁRIOS COMANDOS NA MESMA LINHA
+//vetores: regrinhas:  definir tamanho do vetor e tipo de dado
+//javascript trabalha com lista e nã bloqueia por tipo
+//verificar quem aponta pra quem
+//lista é estrutura mais leve e consome menos memória infinita e dinâmica??
+//vetor é estrutura mais rígida e definida
+//matriz = vetor de vetores
+
+
+let matriz = [
+    v1,
+    v2,
+    v3
+]
+
+}
+
+
+
+
+
+
+
