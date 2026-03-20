@@ -166,11 +166,39 @@ begin
 		where censo.cod_mun = p_mun and censo.ano - p_ano2;
 	return (v_pop2 - v_po1);
 
+//NA FRENTE DO END, TERÁ QUE TER O QUE ESCOLHEMOS COMO DELIMITER ($$, //)
 end $$
 delimiter ;
 
+//utilizar função usando select:
+select fn_cresc_pop(2013, 2014, '1100015')
 
+//escrever DETERMINISTIC no mysql
 
+		No MySQL, ao criar uma função (FUNCTION), a palavra-chave DETERMINISTIC indica que a função sempre retornará o mesmo resultado
+		se receber os mesmos parâmetros de entrada.
+		Essa declaração é uma promessa que você faz ao banco de dados sobre o comportamento do seu código.
+
+Por que usar DETERMINISTIC?
+
+	   1. Otimização de Performance: Se o MySQL sabe que a função é determinística, ele pode salvar o resultado em cache (memoização).
+		Se você chamar a função várias vezes com o mesmo valor em uma única consulta,
+		o banco pode reutilizar o primeiro resultado em vez de processar a lógica novamente.
+	   2. Replicação e Segurança: Por padrão, se o [log binário](https://dev.mysql.com.en2pt.search.translate.goog/doc/refman/9.2/en/replication-options-binary-log.html)
+		estiver ativo, o MySQL exige que você declare se a função é determinística ou se ela não modifica dados (como READS SQL DATA).
+		Isso garante que, ao replicar os dados para outro servidor, o resultado final seja idêntico ao do servidor principal.
+	   3. Índices Funcionais: Para criar um índice baseado em uma função (disponível em versões mais recentes),
+		a função precisa ser declarada como determinística.
+
+Exemplo de diferença:
+
+		* Determinística: Uma função que soma dois números ou formata uma string. Soma(2, 3) será sempre 5.
+		* Não Determinística: Uma função que usa NOW() (data/hora atual) ou RAND() (número aleatório).
+		O resultado muda a cada segundo ou a cada execução, mesmo sem alterar a entrada.
+
+O Erro 1418
+		Se você tentar criar uma função e receber o erro This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA...,
+		é porque o MySQL está pedindo para você classificar o comportamento da sua função por questões de segurança na replicação.
 
 
 
