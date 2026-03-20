@@ -141,6 +141,37 @@ DELIMITER ;
 SELECT fn_crescimento_populacional(2012, 2011, 19) AS crescimento;
 
 
+---------------------------------------------------------------------------------------------------
+Importante analisar o que tenho no banco de dados (onde eu vou buscar o que quero)
+
+delimiter $$
+
+create function fn_creesc_pop(p_ano1 smallint, p_ano2 smallint, p_mun char(7))
+returns int
+begin
+	declare v_pop1 int;
+	declare v_pop2 int;
+
+//adicionar somente um valor da consulta na varíável
+// set é o mesmo que "coloca dentro da variavel"
+
+	set v_pop1 = (select populacao
+		from censo
+		where censo.cod_mun = p_mun and censo.ano - p_ano1);
+
+//adicionar mais de um valor da consulta na varíável, uso do INTO ??
+
+	select populacao into v_pop2
+		from censo
+		where censo.cod_mun = p_mun and censo.ano - p_ano2;
+	return (v_pop2 - v_po1);
+
+end $$
+delimiter ;
+
+
+
+
 
 
 
