@@ -34,3 +34,28 @@ ESTRUTURA TRIGGER
 triggers que executam circular entram em loop
 triigers podem disparar outro triggers
 
+-- histórico do saldo das contas dos clientes.--
+
+-- Observação: guarde o saldo novo e o antigo na tabela de histórico de saldos, bem como a data/hora em que
+-- foi feito o movimento.
+
+create table auditoria_contacorrente
+	 	(conta_id int,
+		saldo_antes decimal(10,2) not null,
+		saldo_depois decimal(10,2) not null,
+		nome_cliente varchar(30) not null,
+        usuario varchar(50) not null,
+		data datetime not null
+     );
+     
+DELIMITER //
+CREATE TRIGGER tr_contacorrente
+BEFORE UPDATE
+ON  auditoria_contacorrente FOR EACH ROW
+
+-- guarde o saldo novo 
+
+BEGIN
+	INSERT INTO auditoria_contacorrente values (contaid, old.saldo_antes, new.saldo_depois, nomecliente, user(), now());
+END //
+DELIMITER ;
