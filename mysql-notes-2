@@ -31,3 +31,6 @@ ESTRUTURA TRIGGER
                         END //
                 DELIMITER;
 
+triggers que executam circular entram em loop
+triigers podem disparar outro triggers
+
