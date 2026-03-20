@@ -10,6 +10,15 @@ REQUISITOS PARA CRIAR UM MECANISMO DE TRIGGER:
 SINTAXE:
         COLCHETES É OPCIONAL
 
+        now() --> pega hora e data também
+        
+        DIFERENTE DE 
+        
+        curdate()
+
+Ao criar trigger, ele é associado a tabela (na estrutura)
+DIFERENTER DE 
+Ao criar funções, é associado ao banco (na estrutura)
 
 
 
