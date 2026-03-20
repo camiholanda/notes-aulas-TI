@@ -1,5 +1,7 @@
 //TRIGGERS -> GATILHOS
 //DEFINIÇÃO MATERIAL PROF MOODLE
+*** PESQUISAR PRA QUE SERVE, CONTEXTO, BASE ***
+        *** AUDITORIA, REGISTRO DE LOG, ATUALIZAR TABLES ***
 
 DIFERENÇA ENTRE TABELAS PERMANENTES E TABELAS TEMPORÁRIAS (VIEWS, ETC)
 
@@ -20,5 +22,12 @@ Ao criar trigger, ele é associado a tabela (na estrutura)
 DIFERENTER DE 
 Ao criar funções, é associado ao banco (na estrutura)
 
+ESTRUTURA TRIGGER 
 
+                DELIMITER //
+                        CREATE TRIGGER tr_del_func <-- <nome trigger>
+                        AFTER DELETE ON <TABELA> FOR EACH ROW
+                        BEGIN
+                        END //
+                DELIMITER;
 
