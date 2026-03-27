@@ -92,6 +92,16 @@ Diferença entre SET e SELECT para Variáveis:
 			SET: Melhor para atribuições simples e diretas (SET @x = 1;).
 			SELECT: Pode ser usado para atribuir variáveis baseadas em resultados de consultas (SELECT @x := COUNT(*) FROM tabela;)
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+lembrar que toda tabela contém ou deve conter um identificador único
+
+CRIAÇÃO DE LOG (EVENTOS, HISTÓRICO)
+
+ CRIAR TABELA DE HISTÓRICO, NECESSÁRIA PARA GUARDAR O LOG
+md5() -->> função que criptografa nome e outros
+
+
+
 
         
   
