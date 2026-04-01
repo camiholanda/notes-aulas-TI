@@ -59,3 +59,53 @@ BEGIN
 	INSERT INTO auditoria_contacorrente values (contaid, old.saldo_antes, new.saldo_depois, nomecliente, user(), now());
 END //
 DELIMITER ;
+
+-------------------------------------
+
+--  Crie uma função que calcule a porcentagem das vagas utilizadas de um determinado curso, cujo
+-- código deverá ser passado como parâmetro para a função
+
+SET GLOBAL log_bin_trust_function_creators = 1;
+
+DELIMITER //
+
+CREATE FUNCTION calporc(cod_curso INT)
+
+RETURNS FLOAT
+DETERMINISTIC
+
+BEGIN
+    DECLARE v INT;
+    DECLARE m INT;
+    DECLARE resultado FLOAT;
+
+    -- total de vagas
+    SELECT vagas INTO v
+    FROM cursos
+    WHERE idcurso = cod_curso;
+
+    -- total de matriculados
+    SELECT matriculados INTO m
+    FROM cursos
+    WHERE idcurso = cod_curso;
+
+    -- cálculo da porcentagem
+    IF v = 0 THEN
+        RETURN 0;
+    END IF;
+
+    SET resultado = (m / v) * 100;
+
+    RETURN resultado;
+   
+END //
+
+DELIMITER ;
+   
+END //
+
+DELIMITER ;
+
+select  calporc(2);
+
+select * from cursos;
