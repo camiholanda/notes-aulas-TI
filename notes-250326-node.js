@@ -53,6 +53,12 @@ MYSQL
 ao adicionar nova rota no arquivo server.js, é necessário rodar o prompt de comando novamente com comando:
 comando: 	<node server.js>
 
-	
+	informar que a rota de banco de dados é assíncrona -> asyn 
+
+
+	try -> catch(eror)
+		comando acima executa tudo dentro de try e qualquer erro que der, o catch pega
+transação em banco deconexao=
+		
 
 
