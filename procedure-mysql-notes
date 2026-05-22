@@ -71,6 +71,41 @@ call acumula_for(10);
 -- procedimento funciona como um bloco inteiro de intruções e é possível: salvar, editar, controlar erros, criar transações
 -- dar nome ao loop: indicar nome antes do início do loop
 
+EXEMPLO 4 - ITERATE FOR + MAIN:
+
+delimiter //
+
+create procedure acumula_for_iterate(in limite smallint)
+main: begin
+	declare contador tinyint default 0;
+    declare soma smallint default 0;
+    
+    if limite < 1 then
+    select "O valor deve ser maior que zero(0)";
+    leave main;
+    end if;
+    
+loop_teste: loop 
+		set contador = contador + 1;
+        set soma = soma + contador;
+        if contador >= limite then
+			leave loop_teste;
+		end if;
+end loop loop_teste;
+
+select soma;
+	
+end //
+delimiter ;
+
+call acumula_for_iterate(-1);
+
+-- procedimento funciona como um bloco inteiro de intruções e é possível: salvar, editar, controlar erros, criar transações
+-- dar nome ao loop: indicar nome antes do início do loop
+-- main e iterate --
+
+
+
 
 
 
