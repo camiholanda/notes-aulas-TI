@@ -1,1 +1,76 @@
 
+EXEMPLO 1 - REPEAT:
+
+delimiter //
+
+create procedure acumula_repita(in limite smallint)
+begin
+	declare contador tinyint default 0;
+    declare soma smallint default 0;
+    repeat
+		set contador = contador + 1;
+        set soma = soma + contador;
+	until contador >= limite
+	end repeat;
+    select soma;
+end //
+delimiter ;
+
+call acumula_repita(10);
+-- realiza pelo menos uma iteração ao loop
+
+
+EXEMPLO 2 - WHILE:
+
+delimiter //
+
+create procedure acumula_enquanto(in limite smallint)
+begin
+	declare contador tinyint default 0;
+    declare soma smallint default 0;
+    
+    while contador < limite do
+    
+		set contador = contador + 1;
+        set soma = soma + contador;
+
+	end while;
+    select soma;
+end //
+delimiter ;
+call acumula_enquanto(10);
+
+-- procedimento funciona como um bloco inteiro de intruções e é possível: salvar, editar, controlar erros, criar transações
+-- função é executada junto com select
+
+
+EXEMPLO 3 -- FOR :
+
+delimiter //
+
+create procedure acumula_for(in limite smallint)
+begin
+	declare contador tinyint default 0;
+    declare soma smallint default 0;
+    
+loop_teste: loop 
+		set contador = contador + 1;
+        set soma = soma + contador;
+        if contador >= limite then
+			leave loop_teste;
+		end if;
+end loop loop_teste;
+
+select soma;
+	
+end //
+delimiter ;
+
+call acumula_for(10);
+
+-- procedimento funciona como um bloco inteiro de intruções e é possível: salvar, editar, controlar erros, criar transações
+-- dar nome ao loop: indicar nome antes do início do loop
+
+
+
+
